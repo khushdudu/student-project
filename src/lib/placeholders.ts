@@ -52,7 +52,7 @@ export async function generateAgentResponse(
   message: string,
   activeCollege: College | null,
   studentProfile: StudentProfile,
-  collegeRequirements?: CollegeRequirements
+  _collegeRequirements?: CollegeRequirements
 ): Promise<AgentResponseResult> {
   await delay(500);
 

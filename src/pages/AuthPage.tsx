@@ -15,10 +15,10 @@ export default function AuthPage() {
     setLoading(true);
 
     if (mode === "login") {
-      const { error } = await supabase.auth.signInWithPassword({ email, password });
+      const { error } = await supabase!.auth.signInWithPassword({ email, password });
       if (error) setError(error.message);
     } else {
-      const { error } = await supabase.auth.signUp({ email, password });
+      const { error } = await supabase!.auth.signUp({ email, password });
       if (error) setError(error.message);
       else setSignupDone(true);
     }
